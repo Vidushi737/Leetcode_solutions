@@ -6,8 +6,13 @@ public:
         for(int i=0;i<nums.size();i++)
         {
             mp[nums[i]]++;
+            if(mp[nums[i]]>(v/2))
+            {
+                return nums[i];
+            }
+
         }
-        for(auto it:mp)
+        /*for(auto it:mp)
         {
             if(it.second>(v/2))
             {
@@ -15,7 +20,8 @@ public:
 
             }
            
-        }
+        }*/
+    
         
         return -1;
     }
