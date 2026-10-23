@@ -1,25 +1,13 @@
 class Solution {
 public:
     void reverseString(vector<char>& s) {
-        int right=s.size()-1;
         int left=0;
-        int size=s.size();
-     
-        
-        while(left<right)
+        int right=s.size()-1;
+        for(;left<right;)
         {
-            char temp=' ';
-            temp=s[left];
-            s[left]=s[right];
-            s[right]=temp;
+            swap(s[left],s[right]);
             left++;
             right--;
-            
-
-        }
-        for(int i=0;i<size;i++)
-        {
-            cout<<s[i];
         }
         
     }
